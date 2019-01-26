@@ -1,0 +1,19 @@
+#connect to sever 
+sudo ssh -i path_to_key -L 8888:localhost:8888 user@ip
+
+# run in jupyter (or in terminal without "!") 
+!pip3 install scikit-learn matplotlib tqdm opencv-python
+
+# kaggle lib
+!pip3 install kaggle --upgrade
+with open('.kaggle/kaggle.json','w') as f:
+    f.write('{"username":"","key":""}')
+!chmod 600 /root/.kaggle/kaggle.json
+!mkdir competition_file
+!kaggle competitions download -c competition_name -p competition_file/
+
+# jupyter extensions
+! pip3 install jupyter_contrib_nbextensions
+!jupyter contrib nbextension install --user
+!jupyter nbextension enable codefolding/main
+!jupyter nbextension enable collapsible_headings/main
