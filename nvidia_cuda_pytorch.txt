@@ -1,0 +1,36 @@
+sudo apt-get update
+sudo apt-get install python3-dev
+sudo apt-get purge nvidia*
+sudo add-apt-repository ppa:graphics-drivers
+sudo apt-get install nvidia-384
+nvidia-smi
+sudo apt install python3-pip
+
+
+wget 'https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_10.0.130-1_amd64.deb'
+sudo dpkg -i cuda-repo-ubuntu1604_10.0.130-1_amd64.deb
+sudo apt-get install gnupg-curl
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda
+nvidia-smi
+#if error
+lsmod | grep nvidia
+sudo rmmod nvidia_drm
+sudo rmmod nvidia_modeset 
+sudo rmmod nvidia_uvm 
+sudo rmmod nvidia
+nvidia-smi
+
+
+pip3 install pandas numpy jupyter torchvision
+sudo apt-get install python3-wheel
+# get link from   
+pip3 install https://download.pytorch.org/whl/cu100/torch-1.0.0-cp35-cp35m-linux_x86_64.whl
+
+
+apt-get install screen
+screen
+jupyter notebook --allow-root --no-browser
+jupyter notebook list
+history > nvidia_cuda_pytorch.txt
