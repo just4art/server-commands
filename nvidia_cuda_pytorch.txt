@@ -1,6 +1,7 @@
 sudo apt-get update
 sudo apt-get install python3-dev
 sudo apt-get purge nvidia*
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:graphics-drivers
 sudo apt-get install nvidia-384
 nvidia-smi
