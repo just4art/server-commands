@@ -24,10 +24,10 @@ sudo rmmod nvidia
 nvidia-smi
 
 
-pip3 install pandas numpy jupyter torchvision
-sudo apt-get install python3-wheel
+pip3 install pandas numpy jupyter torch torchvision
+# sudo apt-get install python3-wheel
 # get link from https://pytorch.org/get-started/locally/
-pip3 install https://download.pytorch.org/whl/cu100/torch-1.0.0-cp35-cp35m-linux_x86_64.whl
+# pip3 install https://download.pytorch.org/whl/cu100/torch-1.0.0-cp35-cp35m-linux_x86_64.whl
 
 
 apt-get install screen
