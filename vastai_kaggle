@@ -27,3 +27,8 @@ with open("/root/.kaggle/kaggle.json",'w') as f:
 !jupyter contrib nbextension install --user
 !jupyter nbextension enable codefolding/main
 !jupyter nbextension enable collapsible_headings/main
+
+
+## to install libs via pip (not conda) 
+!yes | conda install pip 
+!pip install anything 
