@@ -1,0 +1,29 @@
+## https://vast.ai/console/create/
+## Select pytorch/pytorch OS Image
+## Launch mode "Run a jupyter-python notebook  (easiest)."
+
+## Run in notebook:
+!yes | conda install pandas scikit-learn matplotlib tqdm 
+!yes | conda install -c conda-forge opencv 
+
+
+
+## kaggle CLI:
+!yes | apt-get update
+!yes | apt-get install python3-pip
+!pip3 install kaggle --upgrade
+
+!mkdir /root/.kaggle
+with open("/root/.kaggle/kaggle.json",'w') as f:
+    f.write('{"username":"","key":""}')
+!chmod 600 /root/.kaggle/kaggle.json
+
+# download competition data 
+!mkdir competition_file
+!kaggle competitions download -c competition_name -p competition_file/
+
+# jupyter extensions
+! pip3 install jupyter_contrib_nbextensions
+!jupyter contrib nbextension install --user
+!jupyter nbextension enable codefolding/main
+!jupyter nbextension enable collapsible_headings/main
