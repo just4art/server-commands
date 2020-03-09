@@ -31,4 +31,4 @@ with open("/root/.kaggle/kaggle.json",'w') as f:
 
 ## to install libs via pip (not conda) 
 !yes | conda install pip 
-!pip install anything 
+!pip install xgboost lightgbm catboost seaborn pyarrow 
