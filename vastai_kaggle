@@ -8,7 +8,7 @@
 
 ## to install libs via pip (not conda) 
 !yes | conda install pip 
-!pip install xgboost lightgbm catboost seaborn pyarrow albumentations pretrainedmodels
+!pip install xgboost lightgbm catboost seaborn pyarrow albumentations pretrainedmodels pytorch-ignite
 
 
 ## kaggle CLI:
