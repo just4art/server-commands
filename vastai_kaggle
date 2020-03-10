@@ -6,12 +6,15 @@
 !yes | conda install pandas scikit-learn matplotlib tqdm 
 !yes | conda install -c conda-forge opencv 
 
+## to install libs via pip (not conda) 
+!yes | conda install pip 
+!pip install xgboost lightgbm catboost seaborn pyarrow albumentations pretrainedmodels
 
 
 ## kaggle CLI:
 !yes | apt-get update
 !yes | apt-get install python3-pip
-!pip3 install kaggle --upgrade
+!pip install kaggle --upgrade
 
 !mkdir /root/.kaggle
 with open("/root/.kaggle/kaggle.json",'w') as f:
@@ -23,15 +26,11 @@ with open("/root/.kaggle/kaggle.json",'w') as f:
 !kaggle competitions download -c competition_name -p competition_file/
 
 # jupyter extensions
-! pip3 install jupyter_contrib_nbextensions
+!pip install jupyter_contrib_nbextensions
 !jupyter contrib nbextension install --user
 !jupyter nbextension enable codefolding/main
 !jupyter nbextension enable collapsible_headings/main
 
-
-## to install libs via pip (not conda) 
-!yes | conda install pip 
-!pip install xgboost lightgbm catboost seaborn pyarrow albumentations 
 
 !apt-get install unzip 
 !unzip foldername.zip
