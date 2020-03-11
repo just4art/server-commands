@@ -2,18 +2,12 @@
 ## Select pytorch/pytorch OS Image
 ## Launch mode "Run a jupyter-python notebook  (easiest)."
 
-## Run in notebook:
-!yes | conda install pandas scikit-learn matplotlib tqdm 
-!yes | conda install -c conda-forge opencv 
-
 ## to install libs via pip (not conda) 
 !yes | conda install pip 
-!pip install xgboost lightgbm catboost seaborn pyarrow albumentations pretrainedmodels pytorch-ignite
-
+!pip install pandas scikit-learn matplotlib tqdm opencv-python
+!pip install xgboost lightgbm catboost seaborn pyarrow albumentations pretrainedmodels pytorch-ignite 
 
 ## kaggle CLI:
-!yes | apt-get update
-!yes | apt-get install python3-pip
 !pip install kaggle --upgrade
 
 !mkdir /root/.kaggle
