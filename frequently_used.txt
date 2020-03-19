@@ -1,0 +1,33 @@
+# jupyter dark theme https://github.com/dunovank/jupyter-themes
+pip3 install jupyterthemes 
+jt -t chesterish -fs 95 -tfs 11 -nfs 115 -cellw 88% -T -N
+
+# jupyter plot dark 
+from jupyterthemes import jtplot
+jtplot.style(figsize = (20,8))
+
+
+## pandas display settings 
+import pandas as pd
+pd.options.display.max_colwidth = 100
+pd.options.display.max_columns = 120
+pd.options.display.max_rows = 1200
+
+
+## postgres 
+import psycopg2
+pg = "dbname='' user='' host='' password='' port=''"
+conn = psycopg2.connect(pg)
+cursor = conn.cursor()
+cursor.execute(sql)
+colnames = [desc[0] for desc in cursor.description]
+rows = cursor.fetchall()
+tmp = pd.DataFrame(rows, columns=colnames)
+# conn.close()
+
+
+
+
+
+
+
