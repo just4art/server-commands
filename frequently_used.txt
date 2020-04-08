@@ -2,6 +2,9 @@
 pip3 install jupyterthemes 
 jt -t chesterish -fs 95 -tfs 11 -nfs 115 -cellw 88% -T -N
 
+# restore default theme
+jt -r
+
 # jupyter plot dark 
 from jupyterthemes import jtplot
 jtplot.style(figsize = (20,8))
