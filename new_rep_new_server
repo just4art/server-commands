@@ -1,0 +1,14 @@
+ssh-keygen -t rsa -b 4096 -C "timurabdi@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+cat /root/.ssh/id_rsa.pub
+# add this to github keys
+
+apt-get install git
+echo "# tweet-sentiment-extraction" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin {url}
+git push -u origin master
