@@ -26,5 +26,11 @@ with open("/root/.kaggle/kaggle.json",'w') as f:
 !jupyter nbextension enable collapsible_headings/main
 
 
+# upload models to kaggle 
+!kaggle datasets init -p path/to/folder
+# modify name of the dataset in path/to/folder/metadata.json  then:
+!kaggle datasets create -p path/to/folder
+
+
 !apt-get install unzip 
 !unzip foldername.zip
