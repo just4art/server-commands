@@ -1,4 +1,4 @@
-# awesome-server-commands
+# server commands
 
 Commands to install all dependencies on Ubuntu 18.04 with Nvidia GPU for deep learning via pytorch. 
 
